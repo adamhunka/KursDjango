@@ -8,8 +8,12 @@
         <div>
             <h1>Witam na stronie bloga!</h1>
         </div>
+        {% for post in posts%}
         <div>
-            
+            <p>Opublikowany: {{post.publisg_date}}</p>
+            <h2><a href="">{{post.title}}</a></h2>
+            <em>{{post.text|linebreaksbr}}</em>
         </div>
+        {% endfor %}
     </body>
 </html>
